@@ -12,7 +12,7 @@ class SenderMapper implements MapperInterface
     public function __construct(private readonly ErrorMapper $errorMapper) 
     {}
     
-    public function map(response $response): ResponseDto
+    public function map(Response $response): ResponseDto
     {
     	$responseDto = new ResponseDto();
 

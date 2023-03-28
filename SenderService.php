@@ -17,7 +17,7 @@ class SenderService implements SenderInterface
 
     public function sendNotification(NotificationDto $dto): NotificationResponse
     {
-    	$request = $this->requestService->prepare(dto->from, dto->message);
+    	$request = $this->requestService->prepare($dto->from, $dto->message);
     	$response = Http::send($request);
     
         return $this->senderMapper->map($response);
